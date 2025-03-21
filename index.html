@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Redesign</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1 style="font-size: 50px; background-color: #f3d8c2; color: #2c5e6d">
+        Roam with me!
+      </h1>
+    </header>
+    <div class="section">
+      <div class="text">
+        <h2 style="color:#2c5e6d">A need</h2>
+        <p style="width: 100%; margin-left: auto; margin-right: auto">
+          Did you ever feel like a website you are using doesn't make any sense?
+          Maybe the layout is strange, or a button is missing, or it's just
+          really old and hard to navigate. Recently, I was planning a little
+          trip for spring break, and I wondered on a relatively nice looking
+          <a
+            href="https://www.roami.com/destinations/New%20Orleans/63f56be5494169002b5a6142?checkIn=&checkOut=&minOccupancy=1"
+            >website</a
+          >
+          that you can see on the right.
+        </p>
+      </div>
+      <div class="images-container" style="width: 50%; height: 70%">
+        <div class="image">
+          <img
+            src="pictures/roami_main_screen.png"
+            alt="Landing page of Roami hotel."
+            style="align-items: center"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="section" style="flex-direction: row-reverse">
+      <div class="text">
+        <h2 style="color:#2c5e6d">A Frustration</h2>
+        <p style="width: 100%; margin-left: auto; margin-right: auto">
+          The location looked great and the price was affordable, so I was
+          really excited to look into this option. However, when I started
+          exploring the booking part of the page, I could not proceed. All of
+          the "select dates" buttons were grayed out, and I believed the rooms
+          are no longer available. Hovering over the button produced no effect,
+          so did clicking. Little did I know that the intended way to use the
+          page is to scroll all the way above the room "cards" and fill in the
+          filters manually!
+        </p>
+      </div>
+      <div class="images-container" style="width: 50%; height: 70%">
+        <div class="image">
+          <img
+            src="pictures/roami_filter.png"
+            alt="Search filter control screen."
+            style="align-items: center"
+          />
+        </div>
+        <div class="image">
+          <img
+            src="pictures/roami_booking.png"
+            alt="Room selection screen."
+            style="align-items: center"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="section-start">
+      <div class="text" style="width: 90%; margin: 0 auto">
+        <h2 style="color: #2c5e6d; margin-bottom: 20px">An Analysis</h2>
+        <div
+          style="
+            text-align: left;
+            background-color: #f9f9f9;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          "
+        >
+          <h3 style="color: #d86d38; margin-bottom: 15px">
+            Learnability, memorability, and efficiency problems:
+          </h3>
+          <ul
+            style="
+              list-style-type: disc;
+              padding-left: 30px;
+              font-size: 22px;
+              line-height: 1.6;
+            "
+          >
+            <li>
+              The interface does a very poor job of showing an unfinished
+              booking process. While browsing the rooms, the user might see the
+              "select dates" button, and assume that it will take them to
+              choosing dates for this room. However, the button does nothing,
+              which is a very poor design for learnability and efficiency
+            </li>
+            <li>
+              It is not immediately clear that control texts are also buttons,
+              as they are not underlined, which hurts learnability a lot
+            </li>
+            <li>
+              The price slider is hidden and doesn't show the default range,
+              again hurting learnability
+            </li>
+            <li>
+              It was easy to memorize this interface, but unfortunately due to
+              negative features: poorly scaled pictures on the front page and
+              the command buttons around the booking
+            </li>
+            <li>
+              Occasionally, the booking page times out with "Too many requests"
+              error. While this is more of a software topic, it looks like the
+              information is re-fetched from their database every time something
+              gets updated, which signals poor use of caching
+            </li>
+          </ul>
+          <h3 style="color: #d86d38; margin-top: 25px; margin-bottom: 15px">
+            WAVE report:
+          </h3>
+          <ul
+            style="
+              list-style-type: disc;
+              padding-left: 30px;
+              font-size: 22px;
+              line-height: 1.6;
+            "
+          >
+            <li>Somehow, the style of the page doesn't load at all</li>
+            <li>
+              4 errors: missing language, an empty button, and 2 missing form
+              labels
+            </li>
+            <li>
+              37 alerts, most of which are redundant alt text and underscoring
+              unlinked text
+            </li>
+            <li>
+              For some reason 15 missing or null alternative texts are
+              identified as a "feature"
+            </li>
+            <li>14 hidden aria labels</li>
+            <li>Good structural elements</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="section-start">
+      <div class="text">
+        <h2 style="color:#2c5e6d">A solution</h2>
+        <p style="width: 80%; margin-left: auto; margin-right: auto">
+          While I was pretty upset with this navigation system, I decided to
+          channel my energy into a solution. My main focus was to redesign the
+          page such that it keeps most of its elements, but a) fixes the problem
+          of the button, and b) remains responsive and maintains valid style on
+          any screen size or zoom level. 
+        </p>
+        <p> The first step was to create a style sheet in Figma</p>
+        <div class="image">
+          <img
+            src="pictures/figma_one_paiger.png"
+            alt="Design palete for a new webiste."
+            style="width: 100%; height: 650px; object-fit: contain"
+          />
+        </div>
+        <p style="width: 80%; margin-left: auto; margin-right: auto">
+          With this design palete in mind, I used figma to create mockups of the 
+          three main device types that this website is used for.
+        </p>
+      </div>
+      <div class="images-container">
+        <div class="images-row">
+          <div class="image" style="flex :2 2 450px">
+            <p> Desktop View</p>
+            <img
+              src="pictures/desktop.png"
+              alt="Figma mockup of a new website for desktop."
+              style="width: 100%; height: 650px; object-fit: contain"
+            />
+          </div>
+          <div class="image" style="flex: 1 1 300px">
+            <p> Tablet View</p>
+            <img
+              src="pictures/ipad.png"
+              alt="Figma mockup of a new website for tablets."
+              style="width: 100%; height: 650px; object-fit: contain"
+            />
+          </div>
+          <div class="image" style="flex: 1 1 200px">
+            <p> Phone view</p>
+            <img
+              src="pictures/phone.png"
+              alt="Figma mockup of a new website for tablets."
+              style="width: 100%; height: 650px; object-fit: contain"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-start">
+      <h2 style="color:#2c5e6d">A conclusion</h3>
+      <p style="width: 80%; margin-left: auto; margin-right: auto">
+        The end result can be found <a href="https://bkaravan.github.io/cs1300-redesign/">here!</a> Of course, this mock-up is just the first
+        part of an actual redesign, since the new button is just mockup that still 
+        doesn't implement date selection. However, it remains an active hoverable 
+        and clickable button at every step of the user interaction, and it removes 
+        a lot of learnability and memorability complexity that was introduced by the initial design. 
+        Lastly, this page is made accessible by providing alt text, not having empty 
+        or unused elements, and making sure it properly scales on any device size 
+        or zoom level.
+      </p>
+      <p>Thank you for joining me! </p>
+    </div>
+    <footer>
+      <p>&copy; 2025 Bohdan Karavan</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
