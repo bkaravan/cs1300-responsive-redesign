@@ -22,7 +22,7 @@
           Did you ever feel like a website you are using doesn't make any sense?
           Maybe the layout is strange, or a button is missing, or it's just
           really old and hard to navigate. Recently, I was planning a little
-          trip for spring break, and I wondered on a relatively nice looking
+          trip for spring break, and I wandered on a relatively nice looking
           <a
             href="https://www.roami.com/destinations/New%20Orleans/63f56be5494169002b5a6142?checkIn=&checkOut=&minOccupancy=1"
             >website</a
@@ -46,11 +46,11 @@
         <p style="width: 100%; margin-left: auto; margin-right: auto">
           The location looked great and the price was affordable, so I was
           really excited to look into this option. However, when I started
-          exploring the booking part of the page, I could not proceed. All of
+          exploring the booking page, I could not proceed. All of
           the "select dates" buttons were grayed out, and I believed the rooms
-          are no longer available. Hovering over the button produced no effect,
-          so did clicking. Little did I know that the intended way to use the
-          page is to scroll all the way above the room "cards" and fill in the
+          were no longer available. Hovering over the button produced no effect,
+          neither did mouse clicking. Little did I know that the intended way to use the
+          page was to scroll all the way above the room "cards" and fill in the
           filters manually!
         </p>
       </div>
@@ -96,14 +96,14 @@
           >
             <li>
               The interface does a very poor job of showing an unfinished
-              booking process. While browsing the rooms, the user might see the
+              booking process. While browsing rooms, the user might see the
               "select dates" button, and assume that it will take them to
               choosing dates for this room. However, the button does nothing,
               which is a very poor design for learnability and efficiency
             </li>
             <li>
               It is not immediately clear that control texts are also buttons,
-              as they are not underlined, which hurts learnability a lot
+              as they are not underlined, which hurts learnability
             </li>
             <li>
               The price slider is hidden and doesn't show the default range,
@@ -111,13 +111,13 @@
             </li>
             <li>
               It was easy to memorize this interface, but unfortunately due to
-              negative features: poorly scaled pictures on the front page and
-              the command buttons around the booking
+              its negative features: poorly scaled pictures on the front page and
+              command buttons around the booking
             </li>
             <li>
-              Occasionally, the booking page times out with "Too many requests"
+              Occasionally, the booking page would time out with "Too many requests"
               error. While this is more of a software topic, it looks like the
-              information is re-fetched from their database every time something
+              information is re-fetched from the database every time something
               gets updated, which signals poor use of caching
             </li>
           </ul>
@@ -158,10 +158,12 @@
           While I was pretty upset with this navigation system, I decided to
           channel my energy into a solution. My main focus was to redesign the
           page such that it keeps most of its elements, but a) fixes the problem
-          of the button, and b) remains responsive and maintains valid style on
+          of the button; b) remains responsive and maintains valid style on
           any screen size or zoom level. 
         </p>
-        <p> The first step was to create a style sheet in Figma</p>
+        <p> The first step was to create a style sheet in Figma, and every design starts
+          with a design palete!
+        </p>
         <div class="image">
           <img
             src="pictures/figma_one_paiger.png"
@@ -170,7 +172,7 @@
           />
         </div>
         <p style="width: 80%; margin-left: auto; margin-right: auto">
-          With this design palete in mind, I used figma to create mockups of the 
+          With this design palete in mind, I proceded to create mockups of the 
           three main device types that this website is used for.
         </p>
       </div>
@@ -207,9 +209,8 @@
       <h2 style="color:#2c5e6d">A conclusion</h3>
       <p style="width: 80%; margin-left: auto; margin-right: auto">
         The end result can be found <a href="https://bkaravan.github.io/cs1300-redesign/">here!</a> Of course, this mock-up is just the first
-        part of an actual redesign, since the new button is just mockup that still 
-        doesn't implement date selection. However, it remains an active hoverable 
-        and clickable button at every step of the user interaction, and it removes 
+        part of an actual redesign, since the new button is not fully functional. However, it remains hoverable 
+        and clickable at every step of the user interaction, and it removes 
         a lot of learnability and memorability complexity that was introduced by the initial design. 
         Lastly, this page is made accessible by providing alt text, not having empty 
         or unused elements, and making sure it properly scales on any device size 
