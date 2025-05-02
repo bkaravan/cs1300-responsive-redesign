@@ -44,7 +44,7 @@ header {
   justify-content: center;
   padding: 20px;
   margin: 20px auto;
-  background: white;
+  background-color: #fff1ea;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   max-width: 1600px;
@@ -58,7 +58,7 @@ header {
   justify-content: center;
   padding: 20px;
   margin: 20px auto;
-  background: white;
+  background-color: #fff1ea;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   width: 100%; /* Allow it to take full width */
@@ -151,14 +151,14 @@ body {
 }
 
 .titleContainer {
-  margin-top: 30vh;
+  margin-top: 15vh;
   border-radius: 6px;
   display: flex;
   justify-content: start;
   align-items: start;
   font-size: 8vw;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  margin-bottom: 45vh;
+  margin-bottom: 30vh;
   flex-direction: column;
 }
 
@@ -172,7 +172,7 @@ body {
   left: 50%;
   top: 55vh;
   transform: translateX(-50%);
-  font-size: 3rem;
+  font-size: 5rem;
   animation: bounce 1s infinite;
   transition: opacity 0.5s ease-out;
   opacity: 1 !important;
